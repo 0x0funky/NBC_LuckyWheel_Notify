@@ -58,7 +58,7 @@ def get_latest_nbc_tweet():
 	    if i["content"] == "Open a Lucky Wheel":
 	        try:
 	            mins, sec = time_difference(i["prize_wheel_event"]["ExpiredAt"])
-	            expir_str = f"{mins} mins, {sec} sec"
+	            expir_str = f"{mins} m, {sec} s"
 	        except:
 	            expir_str = "Finished"
 	        entry = {
@@ -92,9 +92,39 @@ st.markdown(f'<img src="{icon_url}" style="vertical-align:middle; display:inline
 current_time = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
 st.write("Last updated:", current_time)
 st.write("Produced by 0x0funky: ", "https://twitter.com/0x0funky ","FT:" "https://friend.tech/0x0funky")
-st.write("SocialFi-Tracker (Eazy to find infomation across SocialFi): ", "https://socialfi-tracker.streamlit.app/")
+st.write("SocialFi-Tracker (Eazy to find information across SocialFi): ", "https://socialfi-tracker.streamlit.app/")
 
+st.write('''
+<style>
+@media (max-width: 600px) {
+    [data-testid="block-container"] {
+        flex-direction: row !important;
+    }
+    [data-testid="column"] {
+        width: 12% !important;  /* 100% divided by 6 columns */
+        flex: 0 0 12% !important;
+        min-width: 12% !important;
+        font-size: 10px;
+    }
+    [data-testid="column"] img {
+        width: 30px !important;
+        height: auto;  /* This ensures the aspect ratio of the image remains unchanged */
+        margin-bottom: 10px;
+    }
+}
+</style>
+''', unsafe_allow_html=True)
 
+# custom_css = """
+# <style>
+#     @media (max-width: 600px) {
+#         div[data-testid="column"] > div:first-of-type {
+#             flex-basis: 100% !important; 
+#         }
+#     }
+# </style>
+# """
+# st.markdown(custom_css, unsafe_allow_html=True)
 # List to store fetched datas
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 with col1:
@@ -106,7 +136,7 @@ with col1:
 with col2:
 		st.markdown(f"""
 <div style='text-align: center; margin-bottom: 30px; margin-top: 10px; background-color: blue; color: white;'>
-    Follow Now
+    Follow
 </div>
 """, unsafe_allow_html=True)
 with col3:
@@ -118,7 +148,7 @@ with col3:
 with col4:
 		st.markdown(f"""
 <div style='text-align: center; margin-bottom: 30px; margin-top: 10px; background-color: blue; color: white;'>
-    Need Key
+    Time
 </div>
 """, unsafe_allow_html=True)
 with col5:
@@ -130,7 +160,7 @@ with col5:
 with col6:
 	st.markdown(f"""
 <div style='text-align: center; margin-bottom: 30px; margin-top: 10px; background-color: blue; color: white;'>
-    Need Key
+    NeedKey
 </div>
 """, unsafe_allow_html=True)
 # if st.button("Start Fetching Data"):
