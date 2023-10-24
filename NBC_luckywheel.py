@@ -44,19 +44,7 @@ def get_latest_nbc_tweet():
 
 	# Headers
 	headers = {
-	    "Accept": "application/json, text/plain, */*",
-	    "Accept-Encoding": "gzip, deflate, br",
-	    "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
 	    "Authorization": f"Bearer {NBC_Barear}",
-	    "Origin": "https://pro.newbitcoincity.com",
-	    "Referer": "https://pro.newbitcoincity.com/",
-	    "Sec-Ch-Ua": '"Chromium";v="118", "Google Chrome";v="118", "Not=A?Brand";v="99"',
-	    "Sec-Ch-Ua-Mobile": "?0",
-	    "Sec-Ch-Ua-Platform": "Windows",
-	    "Sec-Fetch-Dest": "empty",
-	    "Sec-Fetch-Mode": "cors",
-	    "Sec-Fetch-Site": "same-site",
-	    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
 	}
 
 	# Making the GET request
@@ -87,6 +75,7 @@ def get_latest_nbc_tweet():
 	return result_list
 
 # st.set_page_config(layout="wide")
+st.set_page_config(page_title= "SocialFi-Tracker", page_icon="./SocialFi_Tracker.png")
 
 def image_to_base64(img_path):
     with open(img_path, "rb") as image_file:
