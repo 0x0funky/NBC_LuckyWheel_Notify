@@ -238,7 +238,13 @@ st.markdown(f'<img src="{icon_url}" style="vertical-align:middle; display:inline
 
 current_time = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
 st.write("Last updated:", current_time)
-st.write("Produced by 0x0funky: ", "https://twitter.com/0x0funky ","FT:" "https://friend.tech/0x0funky")
+
+st.markdown(f"""
+    <div>
+        Produced by <a href="https://twitter.com/0x0funky" target="_blank">0xFunky</a>
+    </div>
+    """, unsafe_allow_html=True)
+
 st.write("SocialFi-Tracker (Eazy to find information across SocialFi): ", "https://socialfi-tracker.streamlit.app/")
 
 st.write('''
@@ -277,6 +283,7 @@ if user_input_key == ACCESS_KEY:
     main_content()
 else:
     if user_input_key:
+        print ("========== You Press the Wrong Key!! ===========")
         st.write("Incorrect key! Join 0xFunky FT room or NBC circle to get the key!")
         st.write("FT:", "https://friend.tech/0x0funky")
         st.write("NBC:", "https://pro.newbitcoincity.com/alpha/profile/0x58264ac8e24a101ef90b28616c740863b159083b")
