@@ -4,7 +4,6 @@ import datetime
 import requests
 import json
 import base64
-from streamlit_javascript import st_javascript
 
 def time_difference(timestamp_str):
     # Parse the timestamp string into a datetime object
