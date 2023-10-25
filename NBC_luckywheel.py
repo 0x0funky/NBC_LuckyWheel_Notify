@@ -245,6 +245,8 @@ st.markdown(f"""
     </div>
     """, unsafe_allow_html=True)
 
+st.write("Raffle Sniper (Quickly snipe the Raffle and know the NFT price before its reveal.): ", "https://nbc-raffle-sniper.streamlit.app/")
+
 st.write("SocialFi-Tracker (Eazy to find information across SocialFi): ", "https://socialfi-tracker.streamlit.app/")
 
 st.write('''
