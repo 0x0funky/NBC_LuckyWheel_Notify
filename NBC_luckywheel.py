@@ -39,7 +39,7 @@ def get_latest_nbc_tweet():
         "page": "1",
         "limit": "500",
         "address": "0x58264Ac8e24a101ef90b28616C740863b159083b",
-        "only_following": "true"
+        "prize_wheel_event": "true",
     }
 
     # Headers
