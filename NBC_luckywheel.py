@@ -37,7 +37,7 @@ def get_latest_nbc_tweet():
         "network": "nos",
         "version": "2",
         "page": "1",
-        "limit": "500",
+        "limit": "100",
         "address": "0x58264Ac8e24a101ef90b28616C740863b159083b",
         "prize_wheel_event": "true",
     }
@@ -69,8 +69,7 @@ def get_latest_nbc_tweet():
                 expir_str = "Finished"
             if i["prize_wheel_event"]["Status"] == "running":
                 if i["prize_wheel_event"]["IsHolder"]:
-                    address = i["prize_wheel_event"]["TwitterAddress"]
-                    amount_access = get_access_key_number(address)
+                    amount_access = "Need"
                 else:
                     amount_access = 0
                 winner_avat = ""
@@ -215,7 +214,7 @@ def main_content():
     """, unsafe_allow_html=True)
 
             
-            time.sleep(2)
+            time.sleep(10)
 
         # st.write("Produced by 0x0funky: ", "https://twitter.com/0x0funky ")
         # st.write("FT: ", "https://friend.tech/0x0funky")
@@ -237,7 +236,7 @@ st.markdown(f'<img src="{icon_url}" style="vertical-align:middle; display:inline
 # st.title("NewBitcoinCity Lucky Wheel Sniper")
 
 current_time = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
-st.write("Last updated:", current_time)
+st.write("Last updated (Auto update 10 Second):", current_time)
 
 st.markdown(f"""
     <div>
