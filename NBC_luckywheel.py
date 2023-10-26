@@ -37,7 +37,7 @@ def get_latest_nbc_tweet():
         "network": "nos",
         "version": "2",
         "page": "1",
-        "limit": "100",
+        "limit": "500",
         "address": "0x58264Ac8e24a101ef90b28616C740863b159083b",
         "prize_wheel_event": "true",
     }
