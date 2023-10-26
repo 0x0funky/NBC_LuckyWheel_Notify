@@ -275,7 +275,7 @@ st.write('''
 </style>
 ''', unsafe_allow_html=True)
 
-ACCESS_KEY = "nbcfunkyonly"
+ACCESS_KEY = "funkynbcft"
 
 user_input_key = st.text_input("Enter the access key: (Find key in FT room or NBC circle)")
 
